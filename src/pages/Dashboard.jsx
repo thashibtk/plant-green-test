@@ -11,7 +11,6 @@ import {
   FaBuilding,
   FaBoxes,
   FaSitemap,
-  FaUserCircle,
   FaCalendar,
   FaBox,
   
@@ -34,8 +33,8 @@ export default function Dashboard() {
   const nav = useNavigate();
 
   function handleLogout() {
-    logout();                      // clear PocketBase session
-    nav("/login", { replace: true }); // go back to Login
+    logout();                      
+    nav("/login", { replace: true }); 
   }
 
   return (
@@ -75,7 +74,6 @@ export default function Dashboard() {
             ))}
         </nav>
 
-        {/* Logout button */}
         <button
           title="Sign out"
           onClick={handleLogout}
@@ -85,7 +83,6 @@ export default function Dashboard() {
         </button>
       </aside>
 
-      {/* Main area */}
       <div className="flex-1">
         {/* Top bar */}
         <header className="flex items-center justify-between px-6 py-4">
@@ -101,7 +98,6 @@ export default function Dashboard() {
           {/* Actions */}
           <div className="ml-4 flex items-center gap-3">
 
-            {/* Show user email */}
             <span className="hidden lg:inline text-sm text-neutral-500 mx-1">
               {user?.email ? `Signed in as ${user.email}` : "Welcome!"}
             </span>
@@ -115,7 +111,6 @@ export default function Dashboard() {
               <FaBox />
             </button>
 
-            {/* Icon buttons */}
             <button className="h-10 w-10 grid place-items-center rounded-xl border border-neutral-200 bg-white hover:bg-neutral-50">
               <FaCog />
             </button>
@@ -126,25 +121,20 @@ export default function Dashboard() {
               <FaBell />
             </button>
 
-            {/* Avatar */}
             <div className=" bg-white">
               <img src="/assets/y9pT9l.png" alt="Logo" className="h-10 w-10 grid place-items-center rounded-xl" />
             </div>
           </div>
         </header>
 
-        {/* Content */}
         <main className="px-6 pb-10">
-          {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-neutral-500">
             <FaSitemap />
             <span>Dashboard</span>
           </div>
 
-          {/* Title */}
           <h1 className="mt-2 text-4xl font-semibold tracking-tight">Platform Dashboard</h1>
 
-          {/* Cards grid */}
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="h-64 md:col-span-2 rounded-2xl bg-neutral-100 border border-neutral-200" />
             <div className="h-64 rounded-2xl bg-neutral-100 border border-neutral-200" />

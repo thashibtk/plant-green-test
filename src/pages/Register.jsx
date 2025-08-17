@@ -26,7 +26,6 @@ export default function Register() {
 
     try {
       setLoading(true);
-      // Only email+password are required by PocketBase users collection.
       await register(email, password, confirm);
       setMsg({ type: "ok", text: "Registration successful! Redirecting to login…" });
       setTimeout(() => nav("/login"), 900);
@@ -41,7 +40,7 @@ export default function Register() {
   return (
     <div className="min-h-screen auth-bg flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-3xl bg-neutral-900/100 rounded-[28px] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,.25)] p-6 md:p-8">
-        {/* Header row */}
+
         <div className="flex items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl md:text-[26px] font-semibold">
@@ -56,9 +55,8 @@ export default function Register() {
 
         <div className="mt-4 border-t border-white/10" />
 
-        {/* Form */}
+
         <form onSubmit={handleSubmit} className="mt-6 space-y-5">
-          {/* Full name row with avatar tile */}
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 md:col-span-3 lg:col-span-2">
               <div className="h-24 w-24 rounded-xl bg-neutral-800/60 border border-white/10 grid place-items-center">
@@ -77,7 +75,6 @@ export default function Register() {
             </div>
           </div>
 
-          {/* Two-column rows */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="text-sm text-neutral-300">Username</label>
@@ -126,7 +123,6 @@ export default function Register() {
             </div>
           </div>
 
-          {/* Terms (left) + Button (right) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <label className="flex items-center gap-3">
               <input
@@ -157,7 +153,6 @@ export default function Register() {
 
           </div>
 
-          {/* Messages */}
           {msg?.text && (
             <div
               className={`p-3 rounded-xl border ${
@@ -173,7 +168,6 @@ export default function Register() {
 
         <div className="mt-5 border-t border-white/10" />
 
-        {/* Footer row */}
         <div className="mt-4 flex items-center justify-between text-sm text-neutral-400">
           <div>
             Already have an account?{" "}

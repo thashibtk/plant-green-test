@@ -5,10 +5,9 @@
 :root { color-scheme: dark; }
 
 .auth-bg{
-  /* just the image, no overlay */
   background-image: url("/assets/lBhsaY.png");
   background-repeat: no-repeat;
-  background-position: center center; /* centered */
-  background-size: cover;             /* fill screen; use 'contain' if you don't want any crop */
-  background-color: #fff;             /* pure white fallback */
+  background-position: center center;
+  background-size: cover;            
+  background-color: #fff;   
 }

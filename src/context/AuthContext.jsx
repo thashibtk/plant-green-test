@@ -34,7 +34,6 @@ export function AuthProvider({ children }) {
     },
     async register(email, password, passwordConfirm) {
       return pb.collection("users").create({ email, password, passwordConfirm });
-      // If your PB requires: { emailVisibility: true, ... }
     },
     logout() {
       pb.authStore.clear();

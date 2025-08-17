@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div className="min-h-screen auth-bg flex items-center justify-center px-4 py-10">
       <div className="w-full max-w-sm bg-neutral-900/100 rounded-[32px] shadow-[0_10px_30px_rgba(0,0,0,.25)] p-8 md:p-10 border border-white/10">
-        {/* Logo only */}
+
         <div className="mb-6">
           <img src="/assets/TBBzMH.svg" alt="Logo" className="h-10 w-40" />
         </div>

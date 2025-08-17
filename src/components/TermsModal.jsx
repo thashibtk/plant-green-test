@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 export default function TermsModal({ open, onClose }) {
-  // Close on ESC
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e) => e.key === "Escape" && onClose?.();
@@ -11,7 +11,6 @@ export default function TermsModal({ open, onClose }) {
 
   if (!open) return null;
 
-  // Click outside to close
   const onBackdropClick = (e) => {
     if (e.target === e.currentTarget) onClose?.();
   };
